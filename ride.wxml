@@ -1,0 +1,2 @@
+<!--pages/ride/ride.wxml-->
+<button class='btn1' bindtap='getback' block='True' >创建行程</button>

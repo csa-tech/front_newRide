@@ -1,0 +1,20 @@
+{
+  "pages":[
+    "pages/ride/ride",
+    "pages/index/index",
+    "pages/logs/logs"
+  
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#8B0000",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle":"white"
+  },
+  "usingComponents": {
+    "van-tabbar": "../dist/tabbar/index",
+    "van-tabbar-item": "../dist/tabbar-item/index"
+  }
+ 
+}

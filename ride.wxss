@@ -1,0 +1,18 @@
+/* pages/ride/ride.wxss */
+.btn1 {
+
+
+
+  width: 30%;
+  margin-left: 60%;
+  margin-top: 130%;
+  background-color:darkred;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
