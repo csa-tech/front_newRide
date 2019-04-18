@@ -3,7 +3,7 @@
 const app = getApp()
 
 Page({
-  date: {
+  data: {
     date:'',
     time: '',
     departure: '',
@@ -43,6 +43,13 @@ Page({
     })
   },
   complete: function () {
+    wx.request({
+      url: 'http://localhost:3000',
+      data:
+        'pushing?ride_id=321&people_num={{num}}&wechat_id=456&note=hahaha&status=pending&departure={{departure}}&destination={{destination}}&approved_people={{num}}&date={{date}}&time={{time}}&price={{price}}'
+
+      
+    })
     wx.navigateTo({
       url: '../ride/ride' // 返回键去index页面
     }
