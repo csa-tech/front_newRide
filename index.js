@@ -16,6 +16,7 @@ Page({
     this.setData({
       date:e.detail.value
     })
+    
   },
   time: function (e) {
     this.setData({
@@ -43,11 +44,40 @@ Page({
     })
   },
   complete: function () {
-    wx.request({
-      url: 'http://localhost:3000',
-      data:
-        'pushing?ride_id=321&people_num={{num}}&wechat_id=456&note=hahaha&status=pending&departure={{departure}}&destination={{destination}}&approved_people={{num}}&date={{date}}&time={{time}}&price={{price}}'
+    var people_nu=this.data.num
+    var depar=this.data.departure
+    var dest=this.data.destination
+    var dat=this.data.date
+    var tim=this.data.time
+    var pri=this.data.price
 
+    wx.request({
+      url: 'http://localhost:3000/pushing',
+      data:{
+        //ride_id:'321',
+        approved_people:people_nu,
+        wechat_id:'xxx',
+        note:'hahahaha',
+        status:'pending',
+        departure:depar,
+        destination:dest,
+        people_num:'5',
+        date: dat,
+        time:tim,
+        price:pri
+
+
+
+
+        
+
+
+
+      }
+
+      /*
+        'pushing?ride_id=321&people_num={{num}}&wechat_id=456&note=hahaha&status=pending&departure={{departure}}&destination={{destination}}&approved_people={{num}}&date={{date}}&time={{time}}&price={{price}}'
+*/
       
     })
     wx.navigateTo({
